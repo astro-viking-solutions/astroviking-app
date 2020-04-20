@@ -1,0 +1,13 @@
+.title {
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+  text-shadow: 2px 2px rgba(0,0,0,.75);
+  text-rendering: optimizeLegibility;
+  font-size: 46pt;
+}
+.title-sub {
+  font-size: 20pt;
+  padding-right: 40px;
+  text-align: right;
+}

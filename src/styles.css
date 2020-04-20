@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+  margin: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+body {
+  background: url('assets/images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: Helvetica, sans-serif;
+}
+
+.bg-shade {
+  background-color: rgba(0,0,0,.3);
+}

@@ -1,0 +1,9 @@
+.nav {
+  font-size: 16pt;
+  color: white;
+  text-align: center;
+}
+
+.nav div {
+  padding: 20px 0 10px 0;
+}
