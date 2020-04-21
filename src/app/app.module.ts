@@ -10,7 +10,6 @@ import {NavComponent} from './components/nav/nav.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ConnectComponent} from './components/connect/connect.component';
-import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatMenuModule} from '@angular/material/menu';
@@ -29,7 +28,6 @@ import {MatMenuModule} from '@angular/material/menu';
     AppRoutingModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
-    FontAwesomeModule,
     MatInputModule,
     MatCardModule,
     MatMenuModule

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {faHome} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-nav',
@@ -7,8 +6,6 @@ import {faHome} from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-
-  faHome = faHome;
 
   constructor() { }
 
