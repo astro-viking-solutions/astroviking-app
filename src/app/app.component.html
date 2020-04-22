@@ -1,7 +1,14 @@
-<div fxLayout="column" fxFlexFill>
-  <app-nav></app-nav>
-  <div fxFlex>
-    <router-outlet></router-outlet>
-  </div>
-  <app-footer></app-footer>
-</div>
+<mat-sidenav-container style="background: none">
+  <mat-sidenav #sidenav role="navigation" class="bg-shade">
+    <app-sidenav (navEmitter)="sidenav.toggle()"></app-sidenav>
+  </mat-sidenav>
+  <mat-sidenav-content fxFlexFill>
+    <div fxLayout="column" fxFlexFill>
+      <app-nav (navToggle)="sidenav.toggle()"></app-nav>
+      <main fxFlex>
+        <router-outlet></router-outlet>
+      </main>
+      <app-footer></app-footer>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,9 +1,8 @@
-.nav {
-  font-size: 16pt;
-  color: white;
-  text-align: center;
+mat-toolbar {
+  height: 40px;
 }
 
-.nav div {
-  padding: 10px 0 10px 0;
+a {
+  text-decoration: none;
+  color: white;
 }

@@ -1,7 +1,11 @@
-<div class="nav bg-shade" fxLayout="row" fxLayoutAlign="center" fxLayoutGap="40px">
-  <div><a routerLink="/">home</a></div>
-  <div>services</div>
-  <div><a routerLink="connect">connect</a></div>
-  <div>labs</div>
-</div>
+<button (click)="showNav()" mat-icon-button fxHide.gt-xs><mat-icon>menu</mat-icon></button>
+<mat-toolbar class="bg-shade" fxLayout="row" fxLayoutAlign="center" fxHide.xs>
+  <div fxFlex fxLayout fxLayoutAlign="center center" fxLayoutGap="30px">
+    <a mat-button routerLink="/">home</a>
+    <a mat-button routerLink="/services">services</a>
+    <a mat-button routerLink="/connect">connect</a>
+    <a mat-button routerLink="/labs">labs</a>
+  </div>
+</mat-toolbar>
+
 
