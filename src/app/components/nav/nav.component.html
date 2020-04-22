@@ -1,4 +1,6 @@
-<button (click)="showNav()" mat-icon-button fxHide.gt-xs><mat-icon>menu</mat-icon></button>
+<div fxLayout="row" fxFlexFill fxHide.gt-xs>
+  <button (click)="showNav()" class="bg-shade"mat-icon-button ><mat-icon>menu</mat-icon></button>
+</div>
 <mat-toolbar class="bg-shade" fxLayout="row" fxLayoutAlign="center" fxHide.xs>
   <div fxFlex fxLayout fxLayoutAlign="center center" fxLayoutGap="30px">
     <a mat-button routerLink="/">home</a>
