@@ -1,12 +1,13 @@
 .main-title {
   color: white;
-  font-weight: bold;
-  font-style: italic;
   text-shadow: 3px 3px 3px rgba(0,0,0,.75);
-  font-size: 46pt;
 }
-.title-sub {
-  font-size: 20pt;
-  padding-right: 40px;
-  text-align: right;
+
+.mat-display-4 {
+  margin: 0 0 10px 0;
+  font-style: italic;
+}
+.mat-display-1 {
+  margin: 0;
+  font-style: italic;
 }
