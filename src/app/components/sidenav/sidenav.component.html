@@ -1,6 +1,6 @@
 <mat-nav-list>
   <a mat-list-item routerLink="/" (click)="navEmitter.emit()">home</a>
-  <a mat-list-item routerLink="/services" (click)="navEmitter.emit()">services</a>
+  <a mat-list-item fxHide routerLink="/services" (click)="navEmitter.emit()">services</a>
   <a mat-list-item routerLink="/connect" (click)="navEmitter.emit()">connect</a>
-  <a mat-list-item routerLink="/labs" (click)="navEmitter.emit()">labs</a>
+  <a mat-list-item fxHide routerLink="/labs" (click)="navEmitter.emit()">labs</a>
 </mat-nav-list>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {NgForm} from '@angular/forms';
+import {ConnectService} from './connect-service';
 
 @Component({
   selector: 'app-connect',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConnectComponent implements OnInit {
 
-  constructor() { }
+  constructor(private connectService: ConnectService) { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(f: NgForm) {
+    console.log(f.value);
+    this.connectService.sendEmail(f.value).subscribe();
   }
 
 }
