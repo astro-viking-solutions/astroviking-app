@@ -22,6 +22,7 @@ import {MatListModule} from '@angular/material/list';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import {HttpClientModule} from '@angular/common/http';
         MatSidenavModule,
         MatIconModule,
         MatListModule,
-        FormsModule
+        FormsModule,
+        MatSnackBarModule
     ],
   providers: [],
   bootstrap: [AppComponent]

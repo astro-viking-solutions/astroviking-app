@@ -6,6 +6,14 @@
   flex-direction: row;
   place-content: stretch center;
 }
+.success-message {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  align-items: stretch;
+  flex-direction: row;
+  place-content: stretch center;
+}
 .mat-form-field {
   margin-right: 10px;
 }

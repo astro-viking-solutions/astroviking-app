@@ -1,5 +1,11 @@
 <div fxLayout="row" fxLayoutAlign="center" fxLayoutGap="20px">
-  <div class="bg-shade connect-form" fxFlex.gt-sm="600px" fxFlex.lt-md="100%">
+  <div class="bg-shade success-message" fxFlex.gt-sm="600px" fxFlex.lt-md="100%" *ngIf="formSubmitted">
+    <div class="connect-greeting" fxLayoutAlign="center center">Thank You!</div>
+    <div class="connect-description" fxLayoutAlign="center">
+      We'll get back to you as soon as possible.
+    </div>
+  </div>
+  <div class="bg-shade connect-form" fxFlex.gt-sm="600px" fxFlex.lt-md="100%" *ngIf="!formSubmitted">
     <div class="connect-greeting" fxLayoutAlign="center center">Let's Connect!</div>
     <div class="connect-description" fxLayoutAlign="center">
         I would love to talk with you about how I can help with your latest development challenges and adventures.
