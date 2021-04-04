@@ -1,1 +1,52 @@
-<p>connect works!</p>
+<div fxLayout="row" fxLayoutAlign="center" fxLayoutGap="20px">
+  <div class="bg-shade success-message" fxFlex.gt-sm="600px" fxFlex.lt-md="100%" *ngIf="formSubmitted">
+    <div class="connect-greeting" fxLayoutAlign="center center">Thank You!</div>
+    <div class="connect-description" fxLayoutAlign="center">
+      We'll get back to you as soon as possible.
+    </div>
+  </div>
+  <div class="bg-shade connect-form" fxFlex.gt-sm="600px" fxFlex.lt-md="100%" *ngIf="!formSubmitted">
+    <div class="connect-greeting" fxLayoutAlign="center center">Let's Connect!</div>
+    <div class="connect-description" fxLayoutAlign="center">
+        I would love to talk with you about how I can help with your latest development challenges and adventures.
+        Just give me a good email address and we'll be in touch!
+    </div>
+    <form class="connect-input" #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <div fxLayout.gt-xs="row" fxLayout.lt-sm="column">
+        <mat-form-field fxFlex>
+          <mat-label>First Name</mat-label>
+          <input matInput ngModel name="firstName" required #firstNameInput="ngModel">
+          <mat-error *ngIf="firstNameInput.hasError('required')">Field must not be empty.</mat-error>
+        </mat-form-field>
+        <mat-form-field fxFlex>
+          <mat-label>Last Name</mat-label>
+          <input matInput ngModel name="lastName" required #lastNameInput="ngModel">
+          <mat-error *ngIf="lastNameInput.hasError('required')">Field must not be empty.</mat-error>
+        </mat-form-field>
+      </div>
+      <div fxLayout.gt-xs="row" fxLayout.lt-sm="column">
+        <mat-form-field fxFlex>
+          <mat-label>Company</mat-label>
+          <input matInput ngModel name="companyName">
+        </mat-form-field>
+        <mat-form-field fxFlex>
+          <mat-label>Email</mat-label>
+          <input matInput ngModel name="email" email required #emailInput="ngModel">
+          <mat-error *ngIf="emailInput.hasError('required')">Field must not be empty.</mat-error>
+          <mat-error *ngIf="!emailInput.hasError('required')">E-mail is invalid.</mat-error>
+        </mat-form-field>
+      </div>
+      <div fxLayout="row">
+        <mat-form-field fxFlex>
+          <mat-label>Message</mat-label>
+          <textarea matInput ngModel name="message" required #messageInput="ngModel" rows="3"></textarea>
+          <mat-error *ngIf="messageInput.hasError('required')">Field must not be empty.</mat-error>
+        </mat-form-field>
+      </div>
+      <div fxLayoutAlign="center" fxLayout="row">
+        <button mat-raised-button [disabled]="f.invalid">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+

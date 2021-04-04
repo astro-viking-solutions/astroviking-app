@@ -1,0 +1,41 @@
+.connect-form {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  align-items: stretch;
+  flex-direction: row;
+  place-content: stretch center;
+}
+.success-message {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  align-items: stretch;
+  flex-direction: row;
+  place-content: stretch center;
+}
+.mat-form-field {
+  margin-right: 10px;
+}
+.connect-greeting {
+  font-family: Jost, sans-serif;
+  font-size: 20pt;
+  height: 50px;
+}
+
+.connect-description {
+  font-family: Jost, sans-serif;
+  text-align: justify;
+  font-size: 12pt;
+  margin: 10pt;
+}
+.connect-input {
+  margin: 10pt;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: white;
+}
