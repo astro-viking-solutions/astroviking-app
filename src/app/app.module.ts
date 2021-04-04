@@ -19,10 +19,13 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
-import { SidenavComponent } from './components/sidenav/sidenav.component';
+import {SidenavComponent} from './components/sidenav/sidenav.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {ToolsComponent} from './components/tools/tools.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import {ClipboardModule} from '@angular/cdk/clipboard';
 
 @NgModule({
   declarations: [
@@ -33,25 +36,28 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     ConnectComponent,
     ServicesComponent,
     LabsComponent,
-    SidenavComponent
+    SidenavComponent,
+    ToolsComponent
   ],
-    imports: [
-        BrowserModule,
-      HttpClientModule,
-        RouterModule,
-        AppRoutingModule,
-        FlexLayoutModule,
-        BrowserAnimationsModule,
-        MatInputModule,
-        MatCardModule,
-        MatButtonModule,
-        MatToolbarModule,
-        MatSidenavModule,
-        MatIconModule,
-        MatListModule,
-        FormsModule,
-        MatSnackBarModule
-    ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    RouterModule,
+    AppRoutingModule,
+    FlexLayoutModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatCardModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    FormsModule,
+    MatSnackBarModule,
+    MatTabsModule,
+    ClipboardModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

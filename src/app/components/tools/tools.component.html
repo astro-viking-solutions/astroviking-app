@@ -1,0 +1,37 @@
+<div style="margin: 20px">
+  <mat-tab-group class="bg-shade">
+    <mat-tab label="Kibana Stacktrace">
+      <div style="margin: 20px">
+        <mat-form-field appearance="fill" style="width: 100%">
+          <mat-label>Paste the log entry from kibana here</mat-label>
+          <textarea matInput [(ngModel)]="logInput" (ngModelChange)="extractErrorMessage()" spellcheck="false" style="overflow: hidden;"></textarea>
+        </mat-form-field>
+        <div *ngIf="stackTrace.length > 0">
+          <div style="background-color: rgba(0,0,0,.7); padding: 10px; border-radius: 4px; margin-bottom: 20px">
+            {{errorMessage}}
+          </div>
+          <div style="background-color: rgba(0,0,0,.7); padding: 10px; border-radius: 4px">
+            <div *ngFor="let line of stackTrace" style="white-space: pre-wrap;">
+              <span *ngIf="line.includes('com.rms')" style="color: #55ffff">{{line}}</span>
+              <span *ngIf="!line.includes('com.rms')">{{line}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="WFS Environment Variables">
+      <div style="margin: 20px">
+        <mat-form-field appearance="fill" style="width: 100%">
+          <mat-label>Paste the input json from the job here</mat-label>
+          <textarea matInput [(ngModel)]="workflowInput" (ngModelChange)="extractWorkflowInput()" spellcheck="false"
+                    style="overflow: hidden;"></textarea>
+        </mat-form-field>
+        <div *ngIf="environmentVariables">
+          <button mat-raised-button [cdkCopyToClipboard]="environmentVariables" color="primary">Copy to clipboard</button>
+          <div style="text-overflow: ellipsis; overflow: hidden; white-space: pre-wrap; margin-top: 20px;">{{environmentVariables}}</div>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>
